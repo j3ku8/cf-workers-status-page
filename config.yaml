@@ -35,7 +35,7 @@ monitors:
   - id: CDN
     name: cdn.qruva.pl
     description: Image Uploader
-    url: 'https://cdn.qruva.pl'
+    url: 'https://cdn.qruva.pl/qruva/chrome_1QIlCiSDP1.png'
     method: GET
     expectStatus: 200
     linkable: false
