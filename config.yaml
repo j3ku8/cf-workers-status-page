@@ -47,3 +47,11 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: false
+    
+  - id: api
+    name: api.qruva.pl
+    description: "API"
+    url: 'https://api.qruva.pl/ping'
+    method: GET
+    expectStatus: 200
+    linkable: false
