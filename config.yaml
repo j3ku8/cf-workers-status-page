@@ -1,7 +1,7 @@
 settings:
-  title: 'Qruva Status'
+  title: 'Bułka'
   url: 'https://status.qruva.pl' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  logo: buka.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
@@ -15,43 +15,44 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: Website # unique identifier
-    name: qruva.pl
-    description: 'Owner`s website.' # default=empty
-    url: 'https://qruva.pl/' # URL to fetch
+  - id: serialdesignationn # unique identifier
+    name: Ai App - Serial Designation N
+    description: 'Aplikacja Ai dla serwera 𝗔𝗕𝗦𝗢𝗟𝗨𝗧𝗘 𝘾𝙔𝙉-𝙀𝙈𝘼 𝗖𝗜𝗧𝗬 ✘ ⩊ ✘' # default=empty
+    url: 'http://144.91.67.20:6878/ping' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: true # allows the title to be a link, default=true
+    linkable: false # allows the title to be a link, default=true
 
-  - id: Moonrise
-    name: moonrise.qruva.pl
-    description: 'Built with Cloudflare Workers And nodeJS.'
-    url: 'https://moonrise.qruva.pl/'
-    method: GET
-    expectStatus: 200
-    linkable: false
+  - id: uzidoorman # unique identifier
+    name: Ai App - Uzi Doorman
+    description: 'Aplikacja Ai dla serwera 𝗔𝗕𝗦𝗢𝗟𝗨𝗧𝗘 𝘾𝙔𝙉-𝙀𝙈𝘼 𝗖𝗜𝗧𝗬 ✘ ⩊ ✘' # default=empty
+    url: 'http://144.91.67.20:6879/ping' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
 
-  - id: CDN
-    name: cdn.qruva.pl
-    description: Image Uploader
-    url: 'https://cdn.qruva.pl/qruva/chrome_1QIlCiSDP1.png'
-    method: GET
-    expectStatus: 200
-    linkable: false
+  # - id: CDN
+  #   name: cdn.qruva.pl
+  #   description: Image Uploader
+  #   url: 'https://cdn.qruva.pl/qruva/chrome_1QIlCiSDP1.png'
+  #   method: GET
+  #   expectStatus: 200
+  #   linkable: false
 
-  - id: AI
-    name: ai.qruva.pl
-    description: "Ai Core"
-    url: 'https://ai.qruva.pl'
-    method: GET
-    expectStatus: 200
-    linkable: false
+  # - id: AI
+  #   name: ai.qruva.pl
+  #   description: "Ai Core"
+  #   url: 'https://ai.qruva.pl'
+  #   method: GET
+  #   expectStatus: 200
+  #   linkable: false
     
-  - id: api
-    name: api.qruva.pl
-    description: "API"
-    url: 'https://api.qruva.pl/ping'
-    method: GET
-    expectStatus: 200
-    linkable: false
+  # - id: api
+  #   name: api.qruva.pl
+  #   description: "API"
+  #   url: 'https://api.qruva.pl/ping'
+  #   method: GET
+  #   expectStatus: 200
+  #   linkable: false
