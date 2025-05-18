@@ -15,6 +15,14 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
+  - id: aibackend
+    name: Ai Backend
+    description: 'Backend odpowiadający za odpowiedzi ai'
+    url: 'https://tight-cherry-40be.ohheygfx.workers.dev/'
+    method: GET
+    expectStatus: 500
+    linkable: false
+    
   - id: serialdesignationn # unique identifier
     name: Ai App - Serial Designation N
     description: 'Aplikacja Ai dla serwera 𝗔𝗕𝗦𝗢𝗟𝗨𝗧𝗘 𝘾𝙔𝙉-𝙀𝙈𝘼 𝗖𝗜𝗧𝗬 ✘ ⩊ ✘' # default=empty
@@ -32,14 +40,6 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
-
-  # - id: CDN
-  #   name: cdn.qruva.pl
-  #   description: Image Uploader
-  #   url: 'https://cdn.qruva.pl/qruva/chrome_1QIlCiSDP1.png'
-  #   method: GET
-  #   expectStatus: 200
-  #   linkable: false
 
   # - id: AI
   #   name: ai.qruva.pl
